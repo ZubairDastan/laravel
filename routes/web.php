@@ -15,18 +15,10 @@ Route::get('/', function () {
     return view('layouts.master.layout');
 });
 
-Route::get('/collection_list', function () {
-    return view('layouts.collection.collection_list');
-});
-Route::get('/collection_add', function () {
-    return view('layouts.collection.collection_add');
-});
-Route::get('/additional_add', function() {
-	return view('layouts.addition.additional_add');
-});
-Route::get('/additional_list', function() {
-	return view('layouts.addition.additional_list');
-});
+Route::get('/collection_list', 'Collection@collection_list');
+Route::get('/collection_add', 'Collection@collection_add');
+Route::get('/additional_add', 'Addition@additional_add');
+Route::get('/additional_list', 'Addition@additional_list');
 Route::get('/bazar_list', function(){
 	return view('layouts.bazar.bazar_list');
 });
